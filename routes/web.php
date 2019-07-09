@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//GENERAL
+
+Route::get('/', ['as' => '/', 'uses' => 'PagesController@home']);
+
+Route::get('/about', ['as' => 'about', 'uses' => 'PagesController@about']);
+
+Route::get('/contact', ['as' => 'contact', 'uses' => 'PagesController@contact']);
+
+
+
+// PROJECTS
+
+Route::resource('projects', 'ProjectsController');

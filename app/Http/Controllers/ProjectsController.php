@@ -20,7 +20,6 @@ class ProjectsController extends Controller
     public function index()
     {
         try{
-
             //$project = auth()->user()->projects;
 
             //$projects = Project::where('owner_id', auth()->id())->get();

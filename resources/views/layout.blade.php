@@ -133,6 +133,10 @@
     i.fa {
         margin-right: 10px;
     }
+    
+    .is-complete {
+        text-decoration: line-through;
+    }
 </style>
 
 </body>

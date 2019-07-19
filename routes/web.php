@@ -11,6 +11,12 @@
 |
 */
 
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+
 //GENERAL
 
 Route::get('/', ['as' => '/', 'uses' => 'PagesController@home']);
@@ -24,3 +30,14 @@ Route::get('/contact', ['as' => 'contact', 'uses' => 'PagesController@contact'])
 // PROJECTS
 
 Route::resource('projects', 'ProjectsController');
+
+
+//TASKS
+
+Route::resource('tasks', 'ProjectTasksController')->except(['store']);
+Route::post('/projects/{project}/tasks', 'ProjectTasksController@store');
+
+
+
+
+
